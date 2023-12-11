@@ -109,15 +109,16 @@ body{
 .page .cards .report-card{
     background-color: var(--Very-Dark-Magenta);
     padding: 24px 26px;
+    position: relative;
     max-width: 350px;
     border-radius: 10px;
     max-height: 220px
 }
 .page .cards .report-card:nth-child(2){
-   margin-top: 20px;
+   top: 20px;
 }
 .page .cards .report-card:nth-child(3){
-   margin-top: 40px;
+   top: 40px;
 }
 .page .cards h4{
     margin: 5px auto;
@@ -166,5 +167,11 @@ body{
     }
     .design-mobile{
         display: block;
+    }
+    .page .cards .report-card:nth-child(2){
+     top: 0px;
+    }
+    .page .cards .report-card:nth-child(0){
+     top: 0px;
     }
 }
