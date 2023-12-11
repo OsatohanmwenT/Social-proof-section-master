@@ -110,7 +110,7 @@ body{
     background-color: var(--Very-Dark-Magenta);
     padding: 24px 26px;
     position: relative;
-    max-width: 350px;
+    max-width: 300px;
     border-radius: 10px;
     max-height: 220px
 }
