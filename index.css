@@ -1,0 +1,170 @@
+:root{
+--Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    max-width: 1440px;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+.design{
+    position: absolute;
+}
+.design-mobile{
+    position: absolute;
+    display: none;
+}
+.design.one{
+    top: 0;
+}
+.design-mobile.one{
+    top: 0;
+}
+.design.two{
+    bottom: -100px;
+}
+.design-mobile.two{
+    bottom: -300px;
+    right: 0;
+}
+.wrapper .page{
+    position: relative;
+    margin: 70px 50px;
+}
+.page .left{
+    float: left;
+    width: 350px;
+    margin: 0 auto;
+    margin-right: 20px;
+    margin-bottom: 60px;
+}
+.page .left .header{
+    font-size: 38px;
+    color: var(--Very-Dark-Magenta);
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+.page .left .text{
+    font-size: 14px;
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: 500;
+    line-height: 24px;
+}
+.page .right{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.page .right .rating{
+    padding: 10px 35px;
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+}
+.page .right .rating:nth-child(1) {
+   right: 100px;
+}
+.page .right .rating:nth-child(2) {
+   right: 50px;
+   top: 50px;
+}
+.page .right .rating:nth-child(3) {
+   right: 10px;
+   padding-right: 60px;
+   top: 100px;
+}
+.page .right .rating::before{
+    content: url("images/icon-star.svg");
+}
+.page .cards{
+    clear: both;
+    display: flex;
+    gap: 30px;
+    color: var(--White);
+}
+.page .cards .head{
+    display: flex;
+    gap: 20px;
+}
+.page .cards .head .image img{
+    border-radius: 100%;
+    height: 50px;
+}
+.page .cards .report-card{
+    background-color: var(--Very-Dark-Magenta);
+    padding: 24px 26px;
+    max-width: 350px;
+    border-radius: 10px;
+    max-height: 220px
+}
+.page .cards .report-card:nth-child(2){
+   margin-top: 20px;
+}
+.page .cards .report-card:nth-child(3){
+   margin-top: 40px;
+}
+.page .cards h4{
+    margin: 5px auto;
+}
+.page .cards span{
+    color: var(--Soft-Pink);
+}
+@media (max-width:500px) {
+    .wrapper .page{
+        display: flex;
+        flex-direction: column;
+    }
+    .page .left{
+        text-align: center;
+    }
+    .page .right{
+        float: none;
+        margin-bottom: 30px;
+    }
+    .page .right .rating{
+        position: relative;
+        padding: 10px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .page .right .rating:nth-child(1){
+        padding: 10px 20px;
+        right: 0;
+        top: 0;
+    }
+    .page .right .rating:nth-child(2){
+        padding: 10px 20px;
+        right: 0;
+        top: 0;
+    }
+    .page .right .rating:nth-child(3){
+        padding: 10px 20px;
+        right: 0;
+        top: 0;
+    }
+    .page .cards{
+        flex-direction: column;
+    }
+    .design{
+        display: none;
+    }
+    .design-mobile{
+        display: block;
+    }
+}
